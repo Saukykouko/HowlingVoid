@@ -1,5 +1,5 @@
-#define SKRELL_BRUTE_MODIFIER 1.70
-#define SKRELL_BURN_MODIFIER 0.60
+#define SKRELL_BRUTE_MODIFIER 1.30
+#define SKRELL_BURN_MODIFIER 0.70
 
 // Skrell!
 /obj/item/bodypart/head/mutant/skrell
