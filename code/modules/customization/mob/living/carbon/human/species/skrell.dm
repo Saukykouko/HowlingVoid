@@ -117,6 +117,10 @@
 	icon = 'icons/organs/skrell_organ.dmi'
 	icon_state = "brain2"
 
+/obj/item/organ/brain/skrell/on_mob_insert(mob/living/carbon/brain_owner, special, movement_flags)
+	. = ..()
+	brain_owner.add_psionic(/datum/psionic/sensitive)
+
 /obj/item/organ/eyes/skrell
 	name = "amphibian eyes"
 	desc = "Large black orbs."
@@ -210,10 +214,10 @@
 		return
 
 	// Moist skin handles heating and charring better while hydrated.
-	damage_mods += 0.85
+	damage_mods += 0.9
 
 /datum/movespeed_modifier/skrell_hydrated_stride
-	multiplicative_slowdown = -0.15
+	multiplicative_slowdown = -0.1
 
 /datum/species/skrell/get_species_description()
 	return "Skrell are amphibious humanoids with heat-tolerant biology and delicate sensory systems. They perform best when hydrated and struggle in the cold."
